@@ -2,6 +2,13 @@
 
 A high-performance news discovery application built with React Native CLI, featuring real-time data fetching, local persistence, and a polished UI.
 
+## 🔗 Live Demo & Download
+
+Explore the application immediately without setting up a local environment:
+
+[![Browser Demo](https://img.shields.io/badge/Live%20Demo-Appetize.io-orange?style=for-the-badge&logo=googlechrome&logoColor=white)](https://appetize.io/app/b_b7pj3buhratytsouasvqxqh7om)
+[![Download APK](https://img.shields.io/badge/Download-Android%20APK-green?style=for-the-badge&logo=android&logoColor=white)](https://drive.google.com/file/d/1rbnH6jZoRo4BDch2tuCT-tgEMQg-aUzd/view?usp=drive_link)
+
 ## 📱 App Functionality
 
 - **Live Feed**: Fetches real-time space news from the Spaceflight News API.

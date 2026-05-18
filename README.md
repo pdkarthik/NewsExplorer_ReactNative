@@ -9,16 +9,40 @@ Explore the application immediately without setting up a local environment:
 [![Browser Demo](https://img.shields.io/badge/Live%20Demo-Appetize.io-orange?style=for-the-badge&logo=googlechrome&logoColor=white)](https://appetize.io/app/b_b7pj3buhratytsouasvqxqh7om)
 [![Download APK](https://img.shields.io/badge/Download-Android%20APK-green?style=for-the-badge&logo=android&logoColor=white)](https://drive.google.com/file/d/1rbnH6jZoRo4BDch2tuCT-tgEMQg-aUzd/view?usp=drive_link)
 
-## 📱 App Functionality
+## ✨ Key Features
 
-- **Live Feed**: Fetches real-time space news from the Spaceflight News API.
-- **Infinite Scrolling**: Lazy-loads articles as you scroll to ensure smooth performance.
-- **Search**: Integrated search functionality to filter articles by title or content.
-- **Bookmarks**: Save your favorite articles locally to read them later.
-- **Persistence**: All bookmarks and app settings are saved on the device disk, so they remain available even after restarting the app.
-- **Responsive Design**: Fully optimized for various screen sizes and notches using Safe Area handling.
+- **Stay Updated**: Instantly view a live feed of the latest space news and articles as soon as you open the app.
+- **Seamless Browsing**: Scroll endlessly through articles without experiencing lag or loading interruptions (Infinite Scrolling).
+- **Find What You Need**: Use the integrated search bar to quickly find articles based on specific topics or keywords.
+- **Save for Later**: Found an interesting article? Bookmark it with a single tap to read it later at your convenience.
+- **Never Lose Your Data**: Your bookmarked articles are safely saved on your device, meaning they'll still be there even if you close and reopen the app.
+- **Share Discoveries**: Easily share fascinating articles with friends or on social media using your phone's native sharing menu.
+- **Responsive Experience**: Enjoy a tailored and safe viewing experience across any device size, without content hiding behind notches.
 
-## 🚀 How to Run the Project
+## 💻 Tech Stack
+
+- **Framework**: React Native (CLI)
+- **State Management**: Redux Toolkit & Redux Persist
+- **Navigation**: React Navigation
+- **Data Fetching**: Axios / Fetch (Spaceflight News API)
+- **Styling**: StyleSheet (React Native)
+
+## 💡 Overview of Approach
+
+My development methodology focused on modularity, performance, and user experience:
+- **Component-Driven Architecture**: Structured the app with modular, reusable UI components to keep the codebase clean, scalable, and easy to maintain.
+- **Performance-First Mindset**: Prioritized smooth 60fps scrolling and rapid interactions by minimizing unnecessary re-renders and keeping heavy data operations off the main thread.
+- **User-Centric UI/UX**: Designed a highly intuitive interface that adapts flawlessly to different screen sizes and device constraints (like notches and home indicators).
+
+## 🛠 Key Technical Decisions
+
+- **Nested Redux Persistence**: To prevent UI lag, I configured Redux Persist to *blacklist* the massive news feed and *only* persist the essential bookmarks. This keeps disk I/O operations fast while ensuring user data is saved.
+- **Memoization (`React.memo`)**: Applied memoization to list items inside the `FlatList` to prevent expensive re-renders during infinite scrolling.
+- **Safe Area Context**: Implemented `useSafeAreaInsets` to programmatically handle padding for notches, ensuring the UI remains professional on all modern devices.
+- **Native Share API**: Leveraged the built-in React Native Share module to provide an OS-native sharing experience, avoiding the bloat of external third-party libraries.
+- **Spaceflight News API**: Selected because it provides high-quality, real-world data with images out-of-the-box without requiring complex API key configurations.
+
+## 🚀 Getting Started
 
 1. **Clone the repository**
 2. **Install dependencies**:
@@ -38,14 +62,6 @@ Explore the application immediately without setting up a local environment:
    cd ios && pod install && cd ..
    npx react-native run-ios
    ```
-
-## 🛠 Key Technical Decisions
-
-- **Redux Toolkit**: Chosen for its robust state management and built-in middleware handling (Thunks).
-- **Nested Redux Persistence**: To prevent UI lag, I implemented a nested persistence configuration that blacklists the massive news feed and only persists the essential bookmarks. This keeps the disk I/O operations fast and the UI responsive.
-- **Spaceflight News API**: Selected because it provides high-quality, real-world data with images without requiring complex API key configurations, making the evaluation process seamless.
-- **Safe Area Context**: Implemented `useSafeAreaInsets` to ensure the UI is fully responsive and professional on devices with notches or home indicators.
-- **Memoization**: Used `React.memo` on list items to prevent unnecessary re-renders during infinite scrolling.
 
 ## 📈 Future Improvements
 

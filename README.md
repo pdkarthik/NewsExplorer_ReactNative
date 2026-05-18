@@ -24,7 +24,7 @@ Explore the application immediately without setting up a local environment:
 - **Framework**: React Native (CLI)
 - **State Management**: Redux Toolkit & Redux Persist
 - **Navigation**: React Navigation
-- **Data Fetching**: Axios / Fetch (Spaceflight News API)
+- **Data Fetching**: Axios (Spaceflight News API)
 - **Styling**: StyleSheet (React Native)
 
 ## 💡 Overview of Approach

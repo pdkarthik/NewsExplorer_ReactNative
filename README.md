@@ -62,11 +62,3 @@ My development methodology focused on modularity, performance, and user experien
    cd ios && pod install && cd ..
    npx react-native run-ios
    ```
-
-## 📈 Future Improvements
-
-Given more time, I would implement:
-- **Unit & Integration Testing**: Adding Jest and React Native Testing Library suites for critical logic.
-- **Dark Mode Support**: Implementing a dynamic theme provider for better user experience in low-light environments.
-- **News Categories**: Adding a category filter (e.g., Blogs, Reports, News) to the Home screen.
-- **Offline Mode**: Full caching of the last 20 articles for reading without any internet connection.
